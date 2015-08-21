@@ -30,5 +30,5 @@
   (= 2400 (reduce (fn [a b] (* a b)) 100 [1 2 3 4]))
 
   "Numbers are not the only things one can reduce"
-  (= "longest" (reduce #((if (< count(%1) count(%2)) %2 %1))
+  (= "longest" (reduce #(if (< (count %1) (count %2)) %2 %1)
                        ["which" "word" "is" "longest"])))
